@@ -5,7 +5,7 @@
     "main": "index.ts",
     "scripts": {
         "lint:fix": "eslint \"**/*.ts\" --fix",
-        "start": "node index.ts",
+        "start": "tsc && node dist/index.js",
         "start:dev": "nodemon index.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
