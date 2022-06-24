@@ -5,11 +5,11 @@ export const printScreen = async (x: number, y: number) => {
     const size = 100;
     const image = robot.screen.capture(x - size, y - size, size * 2, size * 2);
 
-    for (let i = 0; i < image.image.length; i += 1) {
+    image.image.forEach((_: any, i: number) => {
         if (i % 4 === 0) {
             [image.image[i], image.image[i + 2]] = [image.image[i + 2], image.image[i]];
         }
-    }
+    })
 
     const jimp = new Jimp({
         data: image.image,
