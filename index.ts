@@ -1,4 +1,3 @@
-import * as Jimp from 'jimp';
 import { httpServer } from './src/http_server';
 import { webSocketServer } from './src/webSocketServer';
 
